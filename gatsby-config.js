@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `test`,
+    title: `Joe Astuccio`,
     author: `Joe Astuccio`,
     description: `personal blog`,
     siteUrl: `https://astucc.io/`,
