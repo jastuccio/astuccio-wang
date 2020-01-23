@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://astucc.io/sitemap.xml
