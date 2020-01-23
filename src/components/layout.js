@@ -4,6 +4,8 @@ import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
 
+import Footer from "./footer"
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -66,11 +68,12 @@ class Layout extends React.Component {
           <header>{header}</header>
           <main>{children}</main>
         </div>
-        <Footer>
+        <Footer />
+        {/* <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer>
+        </Footer> */}
       </Wrapper>
     )
   }
@@ -80,9 +83,9 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `
 
-const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
-`
+// const Footer = styled.footer`
+//   text-align: center;
+//   margin: 24px;
+// `
 
 export default Layout
