@@ -2,7 +2,7 @@
 path: Uncopyright
 date: 2019-12-19T16:31:52.396Z
 title: Uncopyright
-description: This entire blog is uncopyrighted...
+description: This blog is uncopyrighted...
 ---
 
 This entire blog is uncopyrighted (since December 2019). That means I’ve put it in the public domain, and released my copyright. I do my best to test out any programming/command line code I post. Following the advice in any of my posts is at your own risk.  Doing so will likely result in an exponential increase in happiness and joy! It is possible, but unlikely, that it could lead to things breaking or being embarrassed in front of your grandma at the next hackathon. 
