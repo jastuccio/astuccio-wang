@@ -47,3 +47,5 @@ My gatsby-config.js is a little different from the example on the plugin page be
 ```
 
 Now my emojis are accessible automatically! Thank you [Florian Eckerstorfer](https://florian.ec/about/) for making the Gatsby Plugin.
+
+![](https://res.cloudinary.com/jastuccio/image/upload/v1580240870/blog/accessible-emojis.png)
