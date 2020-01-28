@@ -3,7 +3,7 @@ module.exports = {
     // edit below
     title: `Joe Astuccio`,
     author: `Joe Astuccio`,
-    description: `personal blog`,
+    description: `my personal blog`,
     siteUrl: `https://astucc.io/`,
     social: {
       twitter: `j`,
@@ -56,6 +56,9 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-smartypants`,
+          },
+          {
+            resolve: `gatsby-remark-a11y-emoji`,
           },
         ],
       },
