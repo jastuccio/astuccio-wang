@@ -12,8 +12,6 @@ class IndexPage extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMdx.edges
 
-    // const siteTitle = "Gatsby Starter Personal Website"
-
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
