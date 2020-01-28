@@ -22,7 +22,11 @@ class Now extends React.Component {
           <ul>
             <li>Project Manager for the bostonjs.com website refresh</li>
             <li>Co-organizing <a href="https://www.meetup.com/JAMstack-Boston/">the JAMstack Boston Meetup</a></li>
-            <li>Father to a basketball crazed middle schooler 🏀 ❤️ 😁</li>
+
+            {/* {/* Emojis should be wrapped in <span>, have role="img", and have an accessible description with aria-label or aria-labelledby  jsx-a11y/accessible-emoji */}
+
+
+            <li>Father to a basketball crazed middle schooler <span role="img">  🏀 ❤️ 😁</span></li>
           </ul>
           <p>inspired by Derek Sivers and <a href="https://nownownow.com/about">the Now page movement.</a></p>
 
