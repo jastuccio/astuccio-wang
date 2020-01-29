@@ -12,6 +12,8 @@ import styled from "styled-components"
 
 import { rhythm } from "../utils/typography"
 
+import BioSocialIcons from "./bio-social-icons"
+
 function Bio() {
   return (
     <StaticQuery
@@ -34,11 +36,12 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> Web Developer, Sailor, Stargazer, Hockey Player, and all around fun guy... but my absolute favorite thing is being a dad.
+              Web Developer, Sailor, Stargazer, Hockey Player, and all around fun guy... but my absolute favorite thing is being a dad.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+
+                Connect with me ⬇
+
+                <BioSocialIcons />
             </p>
           </Container>
         )
@@ -46,6 +49,12 @@ function Bio() {
     />
   )
 }
+
+const Container = styled.div`
+  display: flex;
+`
+
+
 
 const bioQuery = graphql`
   query BioQuery {
@@ -65,10 +74,6 @@ const bioQuery = graphql`
       }
     }
   }
-`
-
-const Container = styled.div`
-  display: flex;
 `
 
 export default Bio
