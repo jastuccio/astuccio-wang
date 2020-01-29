@@ -1,0 +1,73 @@
+---
+path: floating-social-icons 
+date: 2020-01-29T14:47:25.840Z
+title: How I built Floating Social Icons 
+description: Some sweet social icons I built based on a design I found online
+---
+
+When it was time to build the social icons for my blog I went to online for inspiration.  I found these amazing, minimal, floating icons!
+
+![](https://res.cloudinary.com/jastuccio/video/upload/v1580327652/floating_social_icons_tunqxe.mov)
+
+Unfortunately I could not find an existing icon library with these effects so I started building them.
+
+To be continued...
+
+```js
+import React from "react"
+import Image from "gatsby-image"
+import styled from "styled-components"
+
+import Github from "../../content/assets/icons/github.icon.svg"
+import Freecodecamp from "../../content/assets/icons/freecodecamp.icon.svg"
+import Twitter from "../../content/assets/icons/twitter.icon.svg"
+
+function BioSocialIcons() {
+  return (
+    <>
+    <Row>
+    <a href="https://github.com/jastuccio" tabindex="1">
+      <DivIcon>
+        <Github />
+      </DivIcon>
+    </a>
+
+      <a href="https://www.freecodecamp.org/forum/u/jastuccio" tabindex="2">
+        <DivIcon>
+          <Freecodecamp />
+        </DivIcon>
+      </a>
+
+      <a href="" tabindex="3">
+        <DivIcon>
+          <Twitter />
+        </DivIcon>
+      </a>
+    </Row>
+
+
+  twitter
+  </>
+  )
+}
+
+const Row = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`
+
+const DivIcon = styled.div`
+  height: 2rem;
+  width: 2rem;
+`
+
+export default BioSocialIcons
+```
+
+## What I learned
+
+>box-shadow creates a rectangular shadow behind an element's entire box. The Drop-shadow() filter function creates a shadow that conforms to the shape (alpha channel) of the image itself. ~ [MDN drop-shadow()](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow)
+
+
+[`box-shadow`  adds shadows around an element's frame.](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
