@@ -17,17 +17,17 @@ function BioSocialIcons() {
   return (
     <>
     <Row>
-    <Alink href="https://github.com/jastuccio" tabindex="1">
+    <a href="https://github.com/jastuccio" tabindex="1">
       <DivIcon>
         <Github />
       </DivIcon>
-    </Alink>
+    </a>
 
-      <Alink href="https://www.freecodecamp.org/forum/u/jastuccio" tabindex="2">
+      <a href="https://www.freecodecamp.org/forum/u/jastuccio" tabindex="2">
         <DivIcon>
           <Freecodecamp />
         </DivIcon>
-      </Alink>
+      </a>
 
       <a href="https://twitter.com/JAstuccio" tabindex="3">
         <DivIcon>
@@ -52,14 +52,26 @@ const Row = styled.div`
   margin-top: 2rem;
   text-decoration: none;
   text-decoration-style: none;
-`
-const Alink = styled.a`
-  text-decoration: none;
+
+  a, a:before, a:after {
+    color: red;
+    text-decoration: none;
+  }
 `
 
 const DivIcon = styled.div`
   height: 2rem;
   width: 2rem;
+  text-decoration: none;
+
+  &:hover {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  svg {
+    filter: drop-shadow(4px 4px 2px rgba(0,0,0,0.5));
+  }
 
 `
 
