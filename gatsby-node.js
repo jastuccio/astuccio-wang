@@ -1,6 +1,37 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+
+
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes, createFieldExtension } = actions
+
+  createFieldExtension({
+    name: `defaultFalse`,
+    extend() {
+      return {
+        resolve(source, args, context, info) {
+          if (source[info.fieldName] == null) {
+            return false
+          }
+          return source[info.fieldName]
+        },
+      }
+    },
+  })
+
+  createTypes(`
+    type Mdx implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      draft: Boolean @defaultFalse
+    }
+  `)
+}
+
+
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -8,10 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMdx(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
+        allMdx(limit: 1000, filter: {frontmatter: {draft: {eq: false}}}, sort: {fields: [frontmatter___date], order: DESC}) {
           edges {
             node {
               fields {
