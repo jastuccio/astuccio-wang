@@ -3,6 +3,7 @@ path: accessible-emojis-gatsby
 date: 2020-01-28T18:38:25.840Z
 title: Accessible Emojis in Gatsby
 description: Accessible emojis in Gatsby
+published: true
 ---
 
 Emojis have become part of our everyday language. They can present problems to people using screen readers. Recently I got an error on build.
